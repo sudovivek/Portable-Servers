@@ -1,4 +1,4 @@
-# Python HTTP/HTTPS File Server
+# Python Portable HTTP/HTTPS File Server
 
 This Python script is a simple HTTP/HTTPS file server that allows you to upload and download files using the PUT method. It can serve files over HTTP and HTTPS protocols.
 
@@ -28,7 +28,8 @@ Available options:
 Features
 
     Supports both HTTP and HTTPS protocols.
-    Allows file uploads using the PUT method.
+    Supports both python version "2.7" & "3".
+    Allows file uploads using the PUT method also have delete method for deleting files.
     Automatically selects an available port from a predefined list.
 
 License
