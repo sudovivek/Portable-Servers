@@ -36,8 +36,8 @@ License
 This script is released under the MIT License. See the LICENSE file for details.
 Author
 
-    Author: Your Name
-    GitHub: Your GitHub Profile
+    Author: SUDOVIVEK
+    GitHub: @sudovivek
 
 Contributing
 
