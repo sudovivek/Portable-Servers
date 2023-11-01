@@ -1,4 +1,4 @@
-# Python FTP Server
+# Python Portable FTP Server
 
 This Python script creates a simple FTP server with the option to run it as a secure FTP server (FTPS). It allows you to easily set up an FTP server with various configuration options.
 
