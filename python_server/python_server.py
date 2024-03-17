@@ -3,6 +3,7 @@ import os
 import socket
 import ssl
 import sys
+import cgi
 
 CERT = 'cert.pem'
 KEY = 'key.pem'
@@ -48,6 +49,56 @@ class HTTPRequestHandler(http_server.SimpleHTTPRequestHandler):
             self.end_headers()
             self.wfile.write("File Putting Successfully\n".encode())
 
+
+
+    def do_POST(self):
+        # Handle the POST request here
+        content_type, params = cgi.parse_header(self.headers.get('Content-Type'))
+
+        # Check if it's a multipart/form-data POST request
+        if content_type == 'multipart/form-data':
+            try:
+                # Parse the form data to get the file content
+                form_data = cgi.FieldStorage(
+                    fp=self.rfile,
+                    headers=self.headers,
+                    environ={'REQUEST_METHOD': 'POST', 'CONTENT_TYPE': self.headers['Content-Type']}
+                )
+
+                # Check if 'file' field exists in the form data
+                if 'file' in form_data:
+                    file_item = form_data['file']
+                    original_filename = file_item.filename  # Get the original filename
+
+                    # Check if the file already exists
+                    counter = 1
+                    base_name, extension = os.path.splitext(original_filename)
+                    while os.path.exists(original_filename):
+                        original_filename = f"{base_name}_{counter}{extension}"
+                        counter += 1
+
+                    # Save the file content to a file with the unique filename
+                    with open(original_filename, 'wb') as file:
+                        file.write(file_item.file.read())
+
+                    # Process the file content as needed
+                    print("Received file content and saved as:", original_filename)
+
+                    # Send a response back to the client
+                    self.send_response(200)
+                    self.send_header('Content-type', 'text/plain')
+                    self.end_headers()
+                    self.wfile.write(f"File '{original_filename}' received and processed successfully\n".encode())
+                    return
+
+            except Exception as e:
+                print("Error processing form data:", str(e))
+
+        # If the request does not match the expected format, send a 400 Bad Request response
+        self.send_response(400)  # Bad Request
+        self.send_header('Content-type', 'text/plain')
+        self.end_headers()
+        self.wfile.write("Invalid form data format\n".encode())
 
 
     def do_DELETE(self):
