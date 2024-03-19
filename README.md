@@ -15,9 +15,6 @@ The `ftp_server` directory contains a Python script (`ftp-server.py`) for settin
 
 python ftp-server.py [options]
 
-### Issues and Feedback
-
-If you encounter any issues or have suggestions for improvement, please open an issue on GitHub.
 
 ## HTTP/HTTPS File Server
 
