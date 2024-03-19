@@ -4,7 +4,7 @@ This repository contains two portable server scripts: one for FTP and another fo
 
 ## FTP Server
 
-The `ftp_server` directory contains a Python script (`ftp-server.py`) for setting up a simple FTP server. It utilizes the `pyftpdlib` library to create the server. 
+The `FTP_server` directory contains a Python script (`ftp-server.py`) for setting up a simple FTP server. It utilizes the `pyftpdlib` library to create the server. 
 
 ### Features
 
@@ -18,7 +18,7 @@ python ftp-server.py [options]
 
 ## HTTP/HTTPS File Server
 
-The `python_server` directory contains a Python script (`http_server.py`) for setting up a simple HTTP/HTTPS file server. It supports file uploads using the PUT, POST & DELETE method and can serve files over HTTP and HTTPS protocols.
+The `HTTP_server` directory contains a Python script (`http-server.py`) for setting up a simple HTTP/HTTPS file server. It supports file uploads using the PUT, POST & DELETE method and can serve files over HTTP and HTTPS protocols.
 
 ### Features
 
@@ -28,7 +28,7 @@ The `python_server` directory contains a Python script (`http_server.py`) for se
 - Automatically selects an available port from a predefined list.
 
 
-python http_server.py [options]
+python http-server.py [options]
 
 
 ### Author
