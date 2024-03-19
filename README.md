@@ -2,19 +2,7 @@
 
 This repository contains two portable server scripts: one for FTP and another for HTTP/HTTPS.
 
-## File Structure
-
-.
-├── ftp_server
-│ ├── ftp-server.py
-│ ├── README.md
-│ └── requirements.txt
-└── python_server
-├── python_server.py
-└── README.md
-
 markdown
-
 
 ## FTP Server
 
