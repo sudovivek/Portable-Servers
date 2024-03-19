@@ -30,7 +30,6 @@ The `python_server` directory contains a Python script (`http_server.py`) for se
 
 python http_server.py [options]
 
-markdown
 
 ### License
 
