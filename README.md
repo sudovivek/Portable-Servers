@@ -18,7 +18,7 @@ python ftp-server.py [options]
 
 ## HTTP/HTTPS File Server
 
-The `python_server` directory contains a Python script (`python_server.py`) for setting up a simple HTTP/HTTPS file server. It supports file uploads using the PUT method and can serve files over HTTP and HTTPS protocols.
+The `python_server` directory contains a Python script (`http_server.py`) for setting up a simple HTTP/HTTPS file server. It supports file uploads using the PUT, POST & DELETE method and can serve files over HTTP and HTTPS protocols.
 
 ### Features
 
@@ -28,7 +28,7 @@ The `python_server` directory contains a Python script (`python_server.py`) for 
 - Automatically selects an available port from a predefined list.
 
 
-python python_server.py [options]
+python http_server.py [options]
 
 markdown
 
