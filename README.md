@@ -2,8 +2,6 @@
 
 This repository contains two portable server scripts: one for FTP and another for HTTP/HTTPS.
 
-markdown
-
 ## FTP Server
 
 The `ftp_server` directory contains a Python script (`ftp-server.py`) for setting up a simple FTP server. It utilizes the `pyftpdlib` library to create the server. 
