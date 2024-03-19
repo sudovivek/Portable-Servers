@@ -24,16 +24,12 @@ The `python_server` directory contains a Python script (`http_server.py`) for se
 
 - Supports both HTTP and HTTPS protocols.
 - Supports both Python 2 and Python 3.
-- Allows file uploads using the PUT method and has a delete method for deleting files.
+- Allows file uploads using the PUT & POST method and has a delete method for deleting files.
 - Automatically selects an available port from a predefined list.
 
 
 python http_server.py [options]
 
-
-### License
-
-This script is released under the MIT License. See the [LICENSE](./python_server/LICENSE) file for details.
 
 ### Author
 
