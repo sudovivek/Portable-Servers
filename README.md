@@ -33,7 +33,7 @@ python http-server.py [options]
 
 ### Author
 
-- Author: SUDOVIVEK
+- Author: Vivek Choudhary
 - GitHub: [@sudovivek](https://github.com/sudovivek)
 
 ### Issues and Feedback
